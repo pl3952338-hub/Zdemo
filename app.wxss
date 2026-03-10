@@ -1,9 +1,22 @@
 /** Global style **/
 app {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background-color: #f7f7f9;
+  background-color: #f8fafc;
+  color: #1f1f1f;
 }
 
 page {
-  background-color: #f7f7f9;
+  background-color: #f8fafc;
+}
+
+.container {
+  padding: 32rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 30rpx;
+  padding: 30rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 20rpx 30rpx rgba(31, 45, 61, 0.08);
 }

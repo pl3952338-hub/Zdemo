@@ -1,18 +1,20 @@
+const records = require('./utils/records');
+
 App({
   globalData: {
-    cartItems: []
+    records: []
   },
-  addToCart(product) {
-    const cart = this.globalData.cartItems || [];
-    const existing = cart.find((item) => item.product.id === product.id);
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      cart.push({
-        product,
-        quantity: 1
-      });
-    }
-    this.globalData.cartItems = cart;
+  onLaunch() {
+    records.loadRecords().then((stored) => {
+      this.globalData.records = stored;
+    });
+  },
+  refreshRecords(callback) {
+    records.loadRecords().then((stored) => {
+      this.globalData.records = stored;
+      if (typeof callback === 'function') {
+        callback(stored);
+      }
+    });
   }
 });

@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="card">
+    <text class="title">扫码 / 拍照记录</text>
+    <text class="timestamp">当前时间：{{timestamp}}</text>
+    <view class="field">
+      <text class="label">产品名称</text>
+      <input
+        placeholder="请输入物料或产品名称"
+        data-field="productName"
+        value="{{form.productName}}"
+        bindinput="handleInput"
+      />
+    </view>
+    <view class="field">
+      <text class="label">数量</text>
+      <input
+        type="number"
+        placeholder="填写数量（整数）"
+        data-field="quantity"
+        value="{{form.quantity}}"
+        bindinput="handleInput"
+      />
+    </view>
+    <view class="field">
+      <text class="label">备注</text>
+      <textarea
+        placeholder="可写入运单号、用途等说明"
+        data-field="notes"
+        value="{{form.notes}}"
+        bindinput="handleInput"
+      />
+    </view>
+    <view class="actions">
+      <button class="pro" bindtap="handleScan">扫码</button>
+      <button class="light" bindtap="takePhoto">拍照</button>
+    </view>
+    <view class="status">
+      <text class="status-label">扫码结果</text>
+      <text class="status-value">
+        {{form.scannedCode ? form.scannedCode : '尚未扫码'}}
+      </text>
+    </view>
+    <block wx:if="{{form.photo}}">
+      <view class="photo-preview">
+        <image mode="aspectFill" src="{{form.photo}}" />
+      </view>
+    </block>
+    <button
+      class="submit"
+      loading="{{submitting}}"
+      disabled="{{submitting}}"
+      bindtap="handleSubmit"
+    >
+      保存记录
+    </button>
+  </view>
+  <button class="link" bindtap="gotoRecords">查看记录列表</button>
+</view>

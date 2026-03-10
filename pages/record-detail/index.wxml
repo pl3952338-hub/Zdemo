@@ -1,0 +1,17 @@
+<view class="container">
+  <block wx:if="{{record}}">
+    <view class="card">
+      <text class="title">{{record.productName}}</text>
+      <text class="meta">数量：{{record.quantity}}</text>
+      <text class="meta">时间：{{record.createdAt}}</text>
+      <text class="status">扫码：{{record.scannedCode ? record.scannedCode : '未扫码'}}</text>
+      <text class="note">备注：{{record.notes ? record.notes : '无'}}</text>
+      <view wx:if="{{record.photo}}" class="photo">
+        <image src="{{record.photo}}" mode="aspectFill" />
+      </view>
+    </view>
+  </block>
+  <view wx:else class="empty">
+    <text>未找到详情。</text>
+  </view>
+</view>

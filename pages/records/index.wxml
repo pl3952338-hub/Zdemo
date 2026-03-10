@@ -1,0 +1,19 @@
+<view class="container">
+  <block wx:if="{{records.length}}">
+    <view
+      class="card"
+      wx:for="{{records}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="openDetail"
+    >
+      <text class="name">{{item.productName}}</text>
+      <text class="meta">数量：{{item.quantity}} · {{item.createdAt}}</text>
+      <text class="status">扫码：{{item.scannedCode ? item.scannedCode : '暂无'}}</text>
+      <text class="note">{{item.notes ? '备注：' + item.notes : '备注：无'}}</text>
+    </view>
+  </block>
+  <view wx:else class="empty">
+    <text>还没有任何记录，先去扫码吧。</text>
+  </view>
+</view>

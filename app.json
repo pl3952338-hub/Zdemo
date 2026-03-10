@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/home/index",
-    "pages/product-list/index",
-    "pages/product-detail/index",
-    "pages/cart/index"
+    "pages/index/index",
+    "pages/records/index",
+    "pages/record-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "Zdemo Store",
+    "navigationBarTitleText": "Scan & Record",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "requiredBackgroundModes": []
 }
