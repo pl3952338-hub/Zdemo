@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/product-list/index",
+    "pages/product-detail/index",
+    "pages/cart/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Zdemo Store",
+    "navigationBarTextStyle": "black"
+  }
+}

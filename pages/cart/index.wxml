@@ -1,0 +1,19 @@
+<view class="page">
+  <view wx:if="{{cart.length}}">
+    <view class="item" wx:for="{{cart}}" wx:key="product.id">
+      <text class="item-name">{{item.product.name}}</text>
+      <text class="item-detail">数量：{{item.quantity}} × ¥{{item.product.price}}</text>
+      <text class="item-total">小计：¥{{item.product.price * item.quantity}}</text>
+      <button class="link-button" bindtap="removeItem" data-id="{{item.product.id}}">移除</button>
+    </view>
+    <view class="subtotal-row">
+      <text>总计：</text>
+      <text class="subtotal-value">¥{{subtotal}}</text>
+    </view>
+    <button class="clear-button" bindtap="clearCart">清空购物车</button>
+  </view>
+  <view wx:else class="empty-state">
+    <text>您的购物车是空的。</text>
+    <text>可前往商品页面继续购物。</text>
+  </view>
+</view>

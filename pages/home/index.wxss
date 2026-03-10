@@ -1,0 +1,95 @@
+.page {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.hero {
+  background: linear-gradient(120deg, #4f7ff8, #6ddfff);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 20rpx;
+  margin-top: 4rpx;
+}
+
+.actions {
+  display: flex;
+  gap: 12rpx;
+}
+
+button.primary {
+  flex: 1;
+  background-color: #4f7ff8;
+  color: #fff;
+}
+
+button.secondary {
+  flex: 1;
+  border-color: #4f7ff8;
+  color: #4f7ff8;
+}
+
+.section {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 18rpx;
+  box-shadow: 0 10rpx 25rpx rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 12rpx;
+  color: #2f2f2f;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.card {
+  padding: 14rpx;
+  border-radius: 16rpx;
+  border: 1rpx solid #ededed;
+  background: #fdfdfd;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.card-sub {
+  color: #888;
+  margin-top: 6rpx;
+}
+
+.card-price {
+  color: #ff5f4d;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.overview-item {
+  padding: 8rpx 12rpx;
+  border-radius: 14rpx;
+  border: 1rpx dashed #d0d0d0;
+  color: #555;
+}

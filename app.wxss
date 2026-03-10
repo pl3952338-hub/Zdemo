@@ -1,0 +1,9 @@
+/** Global style **/
+app {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: #f7f7f9;
+}
+
+page {
+  background-color: #f7f7f9;
+}

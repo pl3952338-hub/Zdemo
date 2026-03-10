@@ -1,0 +1,12 @@
+{
+  "description": "Wechat mini program scaffold for Zdemo",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": false
+  },
+  "appid": "touristappid",
+  "projectname": "Zdemo",
+  "miniprogramRoot": "."
+}

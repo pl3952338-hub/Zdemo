@@ -1,0 +1,13 @@
+<view class="page">
+  <text class="title">商品列表</text>
+  <view class="product" wx:for="{{products}}" wx:key="id">
+    <text class="product-name">{{item.name}}</text>
+    <text class="product-desc">{{item.shortDescription}}</text>
+    <text class="product-price">¥{{item.price}}</text>
+    <text class="product-stock">库存：{{item.stock}} 件</text>
+    <view class="actions">
+      <button bindtap="openDetail" data-id="{{item.id}}">查看详情</button>
+      <button class="secondary" bindtap="addToCart" data-id="{{item.id}}">加入购物车</button>
+    </view>
+  </view>
+</view>
